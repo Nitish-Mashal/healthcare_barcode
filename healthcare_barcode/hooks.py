@@ -13,9 +13,9 @@ fixtures = [
         ]
     },
     {
-        "dt": "Client Script",
+        "dt": "Server Script",
         "filters": [
-            ["name", "=", "Barcode"]
+            ["name", "=", "Sample Collection Barcode"]
         ]
     },
     {
