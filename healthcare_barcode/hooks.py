@@ -5,6 +5,27 @@ app_description = "To print the barcode for the sample collection"
 app_email = "nitish.m@quantumberg.com"
 app_license = "mit"
 
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "=", "Sample Collection-custom_barcode_html"]
+        ]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["name", "=", "Barcode"]
+        ]
+    },
+    {
+        "dt": "Print Format",
+        "filters": [
+            ["name", "=", "Sample Collection Barcode Print"]
+        ]
+    }
+]
+
 # Apps
 # ------------------
 

@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sample Collection",
+  "enabled": 1,
+  "modified": "2026-03-10 12:43:00.881512",
+  "module": null,
+  "name": "Barcode",
+  "script": "frappe.ui.form.on(\"Sample Collection\", {\r\n    refresh: function(frm) {\r\n\r\n        if (frm.doc.name) {\r\n\r\n            let canvas = document.createElement(\"canvas\");\r\n            JsBarcode(canvas, frm.doc.name, {\r\n                format: \"CODE128\",\r\n                width: 2,\r\n                height: 60,\r\n                displayValue: false\r\n            });\r\n\r\n            let base64 = canvas.toDataURL(\"image/png\").split(\",\")[1];\r\n\r\n            frm.set_value(\"custom_barcode_html\", base64);\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ }
+]
