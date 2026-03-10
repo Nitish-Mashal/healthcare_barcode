@@ -13,18 +13,18 @@ fixtures = [
         ]
     },
     {
-        "dt": "Server Script",
-        "filters": [
-            ["name", "=", "Sample Collection Barcode"]
-        ]
-    },
-    {
         "dt": "Print Format",
         "filters": [
             ["name", "=", "Sample Collection Barcode Print"]
         ]
     }
 ]
+
+doc_events = {
+    "Sample Collection": {
+        "after_insert": "healthcare_barcode.sample_collection_barcode.generate_sample_barcode"
+    }
+}
 
 # Apps
 # ------------------
